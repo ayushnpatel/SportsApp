@@ -7,15 +7,56 @@
 //
 
 import UIKit
+import UserNotifications
 import RadarSDK
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UNUserNotificationCenterDelegate, UIApplicationDelegate, RadarDelegate {
+    func didReceiveEvents(_ events: [RadarEvent], user: RadarUser) {
+        
+    }
+    
+    func didUpdateLocation(_ location: CLLocation, user: RadarUser) {
+        
+    }
+    
+    func didUpdateClientLocation(_ location: CLLocation, stopped: Bool, source: RadarLocationSource) {
+        
+    }
+    
+    func didFail(status: RadarStatus) {
+    
+    }
+    
+    func didLog(message: String) {
+    
+    }
+    
 
+    
+    let locationManager = CLLocationManager()
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Radar.initialize(publishableKey: "prj_test_sk_c315de0292a56ef8ff55a1e234e531db26966669")
+        
+        print("hello")
+        
+        Radar.setLogLevel(.debug)
+        Radar.setDelegate(self)
+        locationManager.requestAlwaysAuthorization()
+
+        
+        if UIApplication.shared.applicationState != .background {
+            Radar.getLocation { (status, location, stopped) in
+                print("Location: status = \(Radar.stringForStatus(status)); location = \(String(describing: location))")
+            }
+            
+            Radar.trackOnce { (status, location, events, user) in
+                print("Track once: status = \(Radar.stringForStatus(status)); location = \(String(describing: location)); events = \(String(describing: events)); user = \(String(describing: user))")
+            }
+        }
         return true
     }
 
