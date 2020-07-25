@@ -13,7 +13,6 @@
 		2A23793924CC7F2E00995A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A23793824CC7F2E00995A84 /* Assets.xcassets */; };
 		2A23793C24CC7F2E00995A84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A23793B24CC7F2E00995A84 /* Preview Assets.xcassets */; };
 		2A23793F24CC7F2E00995A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A23793D24CC7F2E00995A84 /* LaunchScreen.storyboard */; };
-		2A23794824CC84D200995A84 /* RadarSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A23794724CC84D200995A84 /* RadarSDK.framework */; };
 		2A23794C24CC84E800995A84 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A23794B24CC84E800995A84 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +25,8 @@
 		2A23793B24CC7F2E00995A84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A23793E24CC7F2E00995A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A23794024CC7F2E00995A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A23794724CC84D200995A84 /* RadarSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RadarSDK.framework; sourceTree = "<group>"; };
 		2A23794B24CC84E800995A84 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		86415F1B24CC8E450041B04A /* RadarSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RadarSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +35,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A23794C24CC84E800995A84 /* CoreLocation.framework in Frameworks */,
-				2A23794824CC84D200995A84 /* RadarSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +83,8 @@
 		2A23794624CC84D200995A84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86415F1B24CC8E450041B04A /* RadarSDK.framework */,
 				2A23794B24CC84E800995A84 /* CoreLocation.framework */,
-				2A23794724CC84D200995A84 /* RadarSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,7 +116,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Ayush Patel";
 				TargetAttributes = {
 					2A23792E24CC7F2C00995A84 = {
@@ -208,6 +206,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -268,6 +267,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
