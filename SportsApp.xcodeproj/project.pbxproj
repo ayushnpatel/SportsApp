@@ -13,6 +13,8 @@
 		2A23793924CC7F2E00995A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A23793824CC7F2E00995A84 /* Assets.xcassets */; };
 		2A23793C24CC7F2E00995A84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A23793B24CC7F2E00995A84 /* Preview Assets.xcassets */; };
 		2A23793F24CC7F2E00995A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A23793D24CC7F2E00995A84 /* LaunchScreen.storyboard */; };
+		2A23794824CC84D200995A84 /* RadarSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A23794724CC84D200995A84 /* RadarSDK.framework */; };
+		2A23794C24CC84E800995A84 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A23794B24CC84E800995A84 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2A23793B24CC7F2E00995A84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A23793E24CC7F2E00995A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A23794024CC7F2E00995A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A23794724CC84D200995A84 /* RadarSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RadarSDK.framework; sourceTree = "<group>"; };
+		2A23794B24CC84E800995A84 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A23794C24CC84E800995A84 /* CoreLocation.framework in Frameworks */,
+				2A23794824CC84D200995A84 /* RadarSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				2A23793124CC7F2C00995A84 /* SportsApp */,
 				2A23793024CC7F2C00995A84 /* Products */,
+				2A23794624CC84D200995A84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,15 @@
 				2A23793B24CC7F2E00995A84 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2A23794624CC84D200995A84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A23794B24CC84E800995A84 /* CoreLocation.framework */,
+				2A23794724CC84D200995A84 /* RadarSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +303,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SportsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SportsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +326,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SportsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SportsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
