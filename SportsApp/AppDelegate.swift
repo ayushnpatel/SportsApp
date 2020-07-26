@@ -9,6 +9,8 @@
 import UIKit
 import UserNotifications
 import RadarSDK
+import Firebase
+import FirebaseCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UNUserNotificationCenterDelegate, UIApplicationDelegate, RadarDelegate {
@@ -39,7 +41,9 @@ class AppDelegate: UIResponder, UNUserNotificationCenterDelegate, UIApplicationD
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         Radar.initialize(publishableKey: "prj_test_sk_c315de0292a56ef8ff55a1e234e531db26966669")
+        FirebaseApp.configure();
         
         print("hello")
         
