@@ -46,13 +46,19 @@ class AppDelegate: UIResponder, UNUserNotificationCenterDelegate, UIApplicationD
         FirebaseApp.configure();
         
         print("hello")
+        // foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        // background
+        self.locationManager.requestAlwaysAuthorization()
         
         Radar.setLogLevel(.debug)
         Radar.setDelegate(self)
-        locationManager.requestAlwaysAuthorization()
-
+        Radar.getLocation { (status, location, stopped) in
+            print("Location: status = \(Radar.stringForStatus(status)); location = \(String(describing: location))")
+        }
         
-        if UIApplication.shared.applicationState != .background {
+        /*if UIApplication.shared.applicationState != .background {
             Radar.getLocation { (status, location, stopped) in
                 print("Location: status = \(Radar.stringForStatus(status)); location = \(String(describing: location))")
             }
@@ -60,7 +66,7 @@ class AppDelegate: UIResponder, UNUserNotificationCenterDelegate, UIApplicationD
             Radar.trackOnce { (status, location, events, user) in
                 print("Track once: status = \(Radar.stringForStatus(status)); location = \(String(describing: location)); events = \(String(describing: events)); user = \(String(describing: user))")
             }
-        }
+        }*/
         return true
     }
 
